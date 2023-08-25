@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import {selectUsuario, selectUsuarios, insertUsuario, deleteUsuario, updateUsuario} from "./db/index.js";
+import {selectUsuario, selectUsuarios, insertUsuario, deleteUsuario, updateUsuario} from "../db/index.js";
 
 const router = Router();
 
