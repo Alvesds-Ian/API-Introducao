@@ -3,19 +3,19 @@ import express from "express";
 import roteadorUsuario from "./routes/usuario.js";
 dotenv.config();
 
-const app = express();
+const router = express();
 const port = 3000;
 
-app.use(roteadorUsuario);
-app.use(express.json());
+router.use(express.json());
+router.use(roteadorUsuario);
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.json({
     message: "API para CRUD usuario: link_gitgub",
   });
 });
 
-app.listen(port, () => {
+router.listen(port, () => {
   // Um socket para "escutar" as requisições
   console.log(`Serviço escutando na porta:  ${port}`);
 });
