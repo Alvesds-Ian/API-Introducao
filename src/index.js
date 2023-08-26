@@ -9,7 +9,7 @@ const port = 3000;
 router.use(express.json());
 router.use(roteadorUsuario);
 
-router.get("/", (req, res) => {
+router.get("/", (_req, res) => {
   res.json({
     message: "API para CRUD usuario: link_gitgub",
   });
